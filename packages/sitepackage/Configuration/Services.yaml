@@ -1,0 +1,14 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    DMK\Sitepackage\:
+        resource: "../Classes/*"
+
+    DMK\Sitepackage\Command\TestCommand:
+        tags:
+            - name: "console.command"
+              command: "dmk:test"
+              schedulable: true
